@@ -36,7 +36,6 @@ public class GestorEscuderia {
     }
 
     public static void despedirEmpleado(String nombre){
-        //hay que usar removeIf
         boolean eliminado = empleados.removeIf(e -> e.getNombre().equalsIgnoreCase(nombre));
         if (!eliminado) {
             throw new EmpleadoNoEncontradoException("No se encontró ningún empleado con el nombre: " + nombre);
